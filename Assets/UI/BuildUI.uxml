@@ -1,0 +1,75 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd" editor-extension-mode="False">
+    <Style src="BuildUSS.uss" />
+    <ui:VisualElement name="Main" style="flex-direction: row-reverse; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgba(32, 34, 37, 0); border-right-color: rgba(32, 34, 37, 0); border-top-color: rgba(32, 34, 37, 0); border-bottom-color: rgba(32, 34, 37, 0); align-items: stretch; position: relative;">
+        <ui:VisualElement name="LeftMainPanel" style="flex-direction: column; align-items: flex-start; position: absolute; top: 0; left: 0;">
+            <ui:VisualElement name="TopLeftPanel" style="height: auto; width: auto; align-items: flex-start; flex-direction: row; justify-content: flex-start; background-color: rgb(32, 34, 37); flex-shrink: 1; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-bottom: 0; margin-top: 0; padding-top: 3px; padding-bottom: 3px;">
+                <ui:Button text="Flight Mode" display-tooltip-when-elided="True" name="FlightModeButton" style="flex-direction: column; justify-content: space-around; width: 60px; height: 50px; flex-grow: 0; -unity-text-align: middle-center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; flex-wrap: nowrap; white-space: normal;" />
+                <ui:Button text="Detailing&#10;Mode" display-tooltip-when-elided="True" name="DetailingButton" style="flex-direction: column; justify-content: flex-end; width: 60px; height: 50px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightMainPanel" style="flex-direction: column; align-items: flex-end; position: absolute; right: 0; bottom: auto; top: 0;">
+            <ui:VisualElement name="TopRightPanel" style="height: auto; width: auto; align-items: flex-start; flex-direction: row-reverse; justify-content: flex-start; background-color: rgb(32, 34, 37); flex-shrink: 1; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-width: 0; border-right-width: 0; border-top-width: 3px; border-bottom-width: 3px;">
+                <ui:Button text="Edit" display-tooltip-when-elided="True" name="EditButton" style="flex-direction: column; justify-content: space-around; width: 60px; height: 50px; flex-grow: 0; -unity-text-align: middle-center; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button text="Deselect" display-tooltip-when-elided="True" name="DeselectButton" style="flex-direction: column; justify-content: flex-end; width: 60px; height: 50px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                <ui:Button text="Reset&#10;Mesh" display-tooltip-when-elided="True" name="ResetMeshButton" style="flex-direction: column; justify-content: flex-end; width: 60px; height: 50px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; display: none;" />
+                <ui:VisualElement name="SelectionModeElement" style="align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; width: 70px;">
+                    <ui:Label text="Selection&#10;Mode" display-tooltip-when-elided="True" name="SelectionModeLabel" style="-unity-text-align: upper-center; color: rgb(185, 187, 190);" />
+                    <ui:Toggle name="SelectionToggle" />
+                </ui:VisualElement>
+                <ui:VisualElement name="VetexSelectionModeElement" style="align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; display: none; width: 70px;">
+                    <ui:Label text="Selection&#10;Mode" display-tooltip-when-elided="True" name="VertexSelectionModeLabel" style="-unity-text-align: upper-center; color: rgb(185, 187, 190);" />
+                    <ui:Toggle name="VertexSelectionToggle" value="true" />
+                </ui:VisualElement>
+                <ui:VisualElement name="AddingModeElement" style="align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; display: none; width: 70px;">
+                    <ui:Label text="Adding&#10;Mode" display-tooltip-when-elided="True" name="AddingModeLabel" style="-unity-text-align: upper-center; color: rgb(185, 187, 190);" />
+                    <ui:Toggle name="AddingModeToggle" />
+                </ui:VisualElement>
+                <ui:VisualElement name="QuadSelectionElement" style="align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; display: none; width: 70px; visibility: visible; overflow: visible;">
+                    <ui:Label text="Quad&#10;Selection" display-tooltip-when-elided="True" name="QuadSelectionLabel" style="-unity-text-align: upper-center; color: rgb(185, 187, 190);" />
+                    <ui:Toggle name="QuadSelectionToggle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="TransformPanel" style="background-color: rgb(32, 34, 37); align-items: stretch; padding-bottom: 2px; border-top-left-radius: 0; border-bottom-left-radius: 3px; border-top-right-radius: 0; border-bottom-right-radius: 3px;">
+                <ui:VisualElement name="LocationContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;">
+                    <ui:VisualElement name="LocationTextContainer" style="flex-direction: row;">
+                        <ui:Label text="Location" display-tooltip-when-elided="True" name="LocationLabel" style="-unity-text-align: middle-center; color: rgb(185, 187, 190);" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="LocationXaxis" />
+                    </ui:VisualElement>
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="LocationYaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="LocationZaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="RotationContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(47, 49, 54); margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; display: flex;">
+                    <ui:VisualElement name="LocationTextContainer" style="flex-direction: row;">
+                        <ui:Label text="Rotation" display-tooltip-when-elided="True" name="RotationLabel" style="-unity-text-align: middle-center; color: rgb(185, 187, 190);" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="RotationXaxis" />
+                    </ui:VisualElement>
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="RotationYaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="RotationZaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ScaleContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(47, 49, 54); margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; display: flex;">
+                    <ui:VisualElement name="ScaleTextContainer" style="flex-direction: row; align-items: stretch; justify-content: flex-start;">
+                        <ui:Label text="Scale" display-tooltip-when-elided="True" name="ScaleLabel" style="-unity-text-align: middle-left; color: rgb(185, 187, 190); align-items: flex-start; flex-direction: row-reverse; flex-grow: 0; padding-right: 17px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="ScaleXaxis" />
+                    </ui:VisualElement>
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="ScaleYaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="ScaleZaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse;" />
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="XYZ = 0.0" name="ScaleXYZaxis" style="justify-content: center; align-items: center; width: auto; flex-direction: row-reverse;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="RoundingContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(47, 49, 54); margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; opacity: 1; display: none;">
+                    <ui:VisualElement name="RoudningButtonContainer" style="flex-direction: row; align-items: stretch; justify-content: flex-start; display: flex;">
+                        <ui:Label text="Rounding" display-tooltip-when-elided="True" name="RoundingLabel" style="-unity-text-align: middle-center; color: rgb(185, 187, 190); flex-direction: row-reverse; align-items: center; justify-content: space-around;" />
+                        <ui:Toggle name="RoundingToggle" value="false" style="margin-bottom: 1px; -unity-text-align: middle-left; align-items: center; background-color: rgba(255, 255, 255, 0); color: rgba(9, 9, 9, 0);" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="1 Decimal Place" name="DPs" style="align-items: center; justify-content: flex-end;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="CameraContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(32, 34, 37); border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; position: absolute; top: auto; left: 0; bottom: 125px; width: 107px; height: 71px;">
+        <ui:Label text="Focal&#10;Point&#10;Position" display-tooltip-when-elided="True" name="LocationLabel" style="-unity-text-align: middle-center; color: rgb(185, 187, 190); height: 65px; white-space: nowrap; position: absolute; top: 0; left: 0; bottom: auto; background-color: rgb(47, 49, 54); border-left-color: rgba(47, 49, 54, 0); border-right-color: rgba(47, 49, 54, 0); border-top-color: rgba(47, 49, 54, 0); border-bottom-color: rgba(47, 49, 54, 0); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-right: 3px; margin-left: 3px; margin-top: 3px; margin-bottom: 3px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="CamLocationXaxis" style="position: absolute; top: 3px; left: 53px; height: 20px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="CamLocationYaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse; position: absolute; top: 26px; left: 53px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="CamLocationZaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse; position: absolute; top: 48px; left: 53px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Toolbar" style="bottom: 0; position: absolute; height: 7.5%; width: 100%; top: auto; left: auto; background-color: rgb(32, 34, 37); flex-direction: row; justify-content: center; align-items: stretch; min-width: 0;" />
+</ui:UXML>

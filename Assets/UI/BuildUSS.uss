@@ -1,0 +1,64 @@
+.unity-button {
+    background-color: rgb(54, 57, 63);
+    -unity-background-image-tint-color: rgb(54, 57, 63);
+    border-left-color: rgb(54, 57, 63);
+    border-right-color: rgb(54, 57, 63);
+    border-top-color: rgb(54, 57, 63);
+    border-bottom-color: rgb(54, 57, 63);
+}
+
+.unity-text-element {
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    align-items: flex-end;
+}
+
+.unity-base-field {
+    background-color: rgb(54, 57, 63);
+}
+
+.unity-base-field__input {
+    flex-direction: column;
+}
+
+.unity-toggle__label {
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.unity-text-field {
+    background-color: rgb(54, 57, 63);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.unity-base-text-field__input {
+    background-color: rgb(54, 57, 63);
+    color: rgb(185, 187, 190);
+    border-left-color: rgb(54, 57, 63);
+    border-right-color: rgb(54, 57, 63);
+    border-top-color: rgb(54, 57, 63);
+    border-bottom-color: rgb(54, 57, 63);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -unity-text-align: upper-left;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-shrink: 20;
+    flex-basis: auto;
+}
+
+.CenterJustification {
+    align-items: center;
+}

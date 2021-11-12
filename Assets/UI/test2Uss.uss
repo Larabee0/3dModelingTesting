@@ -1,0 +1,64 @@
+.screen {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    -unity-background-scale-mode: scale-and-crop;
+    background-image: url('/Assets/UI/CloneWarsPoster.png');
+}
+
+.title-screen-pane {
+    align-items: center;
+    width: 300px;
+    margin-top: 40px;
+}
+
+.button {
+    justify-content: center;
+    width: 266px;
+    height: 87px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 255);
+    background-color: rgb(41, 43, 47);
+    -unity-slice-left: 80;
+    -unity-slice-top: 40;
+    -unity-slice-right: 80;
+    -unity-slice-bottom: 40;
+    -unity-background-image-tint-color: rgba(41, 43, 47, 255);
+}
+
+.button:hover {
+    color: rgba(220, 221, 222, 255);
+    background-color: rgba(54, 56, 62, 255);
+}
+
+.lable {
+    background-color: rgba(64, 68, 75, 255);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 255);
+}
+
+.unity-base-field__input {
+    background-color: rgb(41, 43, 47);
+    color: rgb(255, 255, 255);
+}
+
+.unity-base-text-field__input {
+    background-color: rgb(41, 43, 47);
+}
+
+.unity-text-field__input {
+}

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" class="screen" style="background-image: url(&apos;/Assets/UI/CloneWarsPoster.png&apos;);">
+        <Style src="test2Uss.uss" />
+        <Style src="/Assets/DefaultCommonDark.uss.asset" />
+        <ui:TextField picking-mode="Ignore" value=" text" text="filler Text" name="TextField1" />
+        <ui:VisualElement name="Button-panel" class="title-screen-pane">
+            <ui:Button text="Button" display-tooltip-when-elided="True" name="Button" />
+            <ui:Label text="Label" display-tooltip-when-elided="True" name="Lable1" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

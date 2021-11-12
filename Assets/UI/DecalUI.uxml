@@ -1,0 +1,69 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="MainContainer">
+        <Style src="BuildUSS.uss" />
+        <ui:VisualElement name="RightContainer" style="position: absolute; top: 0; left: 0;">
+            <ui:Button text="Build Mode" display-tooltip-when-elided="True" name="BuildModeButton" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LeftContainer" style="flex-direction: column; justify-content: flex-end; align-items: flex-end; position: absolute; top: 0; left: auto; right: 0;">
+            <ui:VisualElement name="ButtonContainer" style="flex-direction: row-reverse; align-items: center; justify-content: flex-end; background-color: rgb(47, 49, 54); border-top-left-radius: 0; border-bottom-left-radius: 3px; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                <ui:Button text="Move Decal" display-tooltip-when-elided="True" name="MoveDecal" />
+                <ui:Button text="Place Decal" display-tooltip-when-elided="True" name="PlaceDecal" />
+            </ui:VisualElement>
+            <ui:VisualElement name="LeftStackPanel" style="background-color: rgb(47, 49, 54); padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; border-bottom-left-radius: 3px;">
+                <ui:VisualElement name="LocationContainer" style="flex-direction: row; align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: flex-end; margin-top: 3px;">
+                    <ui:Label text="Location" display-tooltip-when-elided="True" name="LocationLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; min-width: 55px;" />
+                    <ui:VisualElement name="LocationFieldContainer" style="align-items: stretch;">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="LocationXField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="LocationYField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="LocationZField" style="min-width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="RotationContainer" style="flex-direction: row; align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: flex-end; margin-top: 3px;">
+                    <ui:Label text="Rotation" display-tooltip-when-elided="True" name="RotationLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; min-width: 55px;" />
+                    <ui:VisualElement name="RotationFieldContainer" style="align-items: stretch;">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="RotationXField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="RotationYField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="RotationZField" style="min-width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="ScaleContainer" style="flex-direction: row; align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: flex-end; margin-top: 3px;">
+                    <ui:Label text="Scale" display-tooltip-when-elided="True" name="ScaleLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; flex-grow: 0; min-width: 55px;" />
+                    <ui:VisualElement name="ScaleFieldContainer" style="align-items: stretch;">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="ScaleXField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="ScaleYField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="ScaleZField" style="min-width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="DensityContainer" style="flex-direction: row; align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: flex-end; margin-top: 3px;">
+                    <ui:Label text="Density" display-tooltip-when-elided="True" name="DensityLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; flex-grow: 0; min-width: 55px;" />
+                    <ui:VisualElement name="DensityFieldContainer" style="align-items: stretch; justify-content: space-around;">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Cols &amp; Rows = 1" name="DensityXField" readonly="true" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Cols = 1" name="DensityYField" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Rows = 1" name="DensityZField" style="min-width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="OffsetContainer" style="flex-direction: row; align-items: center; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: flex-end; margin-top: 3px;">
+                    <ui:Label text="Offset" display-tooltip-when-elided="True" name="OffsetLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; flex-grow: 0; min-width: 55px;" />
+                    <ui:VisualElement name="DensityFieldContainer" style="align-items: stretch; justify-content: space-around;">
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0" name="OffsetXField" readonly="true" style="min-width: 100px;" />
+                        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0" name="OffsetYField" style="min-width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="TransparencyContainer" style="flex-direction: column; align-items: stretch; background-color: rgb(47, 49, 54); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; justify-content: space-between; margin-top: 5px;">
+                    <ui:Label text="Transparency" display-tooltip-when-elided="True" name="TransparencyLabel" style="background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: middle-center; flex-grow: 0;" />
+                    <ui:Slider picking-mode="Ignore" value="0" high-value="100" name="TransparencySlider" show-input-field="false" style="background-color: rgba(47, 49, 54, 0); justify-content: space-around; align-items: auto;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Toolbar" style="bottom: 0; position: absolute; height: 7.5%; width: 100%; top: auto; left: auto; background-color: rgb(32, 34, 37); flex-direction: row; justify-content: center; align-items: stretch; min-width: 0;">
+        <Style src="BuildUSS.uss" />
+    </ui:VisualElement>
+    <ui:VisualElement name="CameraContainer" style="flex-direction: column; align-items: flex-end; background-color: rgb(32, 34, 37); border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 3px; margin-top: 1px; margin-bottom: 1px; position: absolute; top: auto; left: 0; bottom: 125px; width: 107px; height: 71px;">
+        <Style src="BuildUSS.uss" />
+        <ui:Label text="Focal&#10;Point&#10;Position" display-tooltip-when-elided="True" name="LocationLabel" style="-unity-text-align: middle-center; color: rgb(185, 187, 190); height: 65px; white-space: nowrap; position: absolute; top: 0; left: 0; bottom: auto; background-color: rgb(47, 49, 54); border-left-color: rgba(47, 49, 54, 0); border-right-color: rgba(47, 49, 54, 0); border-top-color: rgba(47, 49, 54, 0); border-bottom-color: rgba(47, 49, 54, 0); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-right: 3px; margin-left: 3px; margin-top: 3px; margin-bottom: 3px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="X = 0.0" name="CamLocationXaxis" style="position: absolute; top: 3px; left: 53px; height: 20px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="Y = 0.0" name="CamLocationYaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse; position: absolute; top: 26px; left: 53px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" text="Z = 0.0" name="CamLocationZaxis" style="justify-content: flex-end; align-items: flex-end; width: auto; flex-direction: row-reverse; position: absolute; top: 48px; left: 53px;" />
+    </ui:VisualElement>
+</ui:UXML>

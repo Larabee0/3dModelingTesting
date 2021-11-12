@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="MainContainer" style="position: relative;">
+        <Style src="BuildUSS.uss" />
+        <ui:VisualElement name="TopContainer" style="position: absolute; top: 0; left: 0; background-color: rgb(47, 49, 54); border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 3px; border-bottom-right-radius: 3px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px;">
+            <ui:Button text="Build Mode" display-tooltip-when-elided="True" name="BuildMode" />
+            <ui:Label text="THR: 100%" display-tooltip-when-elided="True" name="ThrustIndicator" style="padding-top: 0; -unity-text-align: middle-center; background-color: rgb(54, 57, 63); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-top: 6px;" />
+            <ui:Label text="SPD: 100m/s" display-tooltip-when-elided="True" name="SpeedIndicator" style="-unity-text-align: middle-center; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; background-color: rgb(54, 57, 63); margin-top: 3px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomContainer" style="background-color: rgb(47, 49, 54); align-items: center; position: absolute; top: 594.6667px; left: 0; flex-direction: row-reverse; max-width: 100px; min-width: 50px; min-height: 50px;">
+            <ui:Slider picking-mode="Ignore" value="0" high-value="100" direction="Vertical" low-value="-100" />
+            <ui:VisualElement>
+                <ui:Slider picking-mode="Ignore" value="0" high-value="100" low-value="-100" />
+                <ui:Slider picking-mode="Ignore" value="0" high-value="100" low-value="-100" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
