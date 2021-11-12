@@ -302,7 +302,7 @@ Material:
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
-    - _ZTestTransparent: 4
+    - _ZTestTransparent: 6
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.9686275, g: 0.29411763, b: 0.1568627, a: 1}
